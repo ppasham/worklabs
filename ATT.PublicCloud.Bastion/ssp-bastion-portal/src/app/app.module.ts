@@ -9,6 +9,10 @@ import { HttpComponent } from './modules/allow/http/http.component';
 import { BinaryComponent } from './modules/allow/binary/binary.component';
 import { TicketComponent } from './modules/ticket/ticket.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { PageLayoutComponent } from './shared/layout/pagelayout/pagelayout.component';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { LayoutModule } from './shared/layout/layout.module';
+import { ApplicationErrorComponent } from './shared/components/application-error/application-error.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
     HttpComponent,
     BinaryComponent,
     TicketComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageLayoutComponent,
+    ApplicationErrorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
