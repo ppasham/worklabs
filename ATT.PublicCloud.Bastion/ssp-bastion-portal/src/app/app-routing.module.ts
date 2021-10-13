@@ -6,22 +6,11 @@ import { PageLayoutComponent } from './shared/layout/pagelayout/pagelayout.compo
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     component: DashboardComponent,
     children: [
       {
-        path: '',
-        loadChildren: './modules/dashboard.module#DashboardModule'
-      }
-    ]
-  },
-  {
-    path: '',
-    component: PageLayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: './layout/layout.module#LayoutModule'
+        path: 'dashboard',
+        loadChildren: './modules/dashboard.module#DashboardModule',
       }
     ]
   }
